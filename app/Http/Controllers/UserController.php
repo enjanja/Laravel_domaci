@@ -25,4 +25,14 @@ class UserController extends Controller
             //$ php artisan make:controller ProductController
         }
     }
+
+    function register(Request $req){
+        // return $req->input();
+        $user = new User;
+        $user->name = $req->name;
+        $user->email = $req->email;
+        $user->password = Hash::make($req->password);
+        $user->save();
+        return redirect('/login');
+    }
 }
