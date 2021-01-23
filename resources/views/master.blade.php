@@ -47,5 +47,12 @@
     .trending-wrapper{
         margin: 30px;
     }
+    .detail-img{
+        height: 200px;
+
+    }
+    .search-box{
+        width: 300px !important;
+    }
 </style>
 </html>

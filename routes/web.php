@@ -21,3 +21,7 @@ Route::get('/login', function () {
 
 Route::post('/login', [UserController::class,'login']);
 Route::get('/', [ProductController::class,'index']);
+Route::get('detail/{id}', [ProductController::class,'detail']);//ruta za prikaz detalja proizvoda
+//detail{id} - na osnovu id-a proizvoda otvaramo tu stranicu
+Route::get('search', [ProductController::class,'search']);
+
