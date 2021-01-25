@@ -16,24 +16,32 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/login', function () {
-    return view('login'); //root route
+    return view('login');
 });
 Route::get('/logout', function () {
     Session::forget('user');
-    return redirect('login'); //root route
+    return redirect('login');
 });
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
 
 Route::post('/login', [UserController::class,'login']);
 Route::get('/', [ProductController::class,'index']);
 Route::get('detail/{id}', [ProductController::class,'detail']);//ruta za prikaz detalja proizvoda
 //detail{id} - na osnovu id-a proizvoda otvaramo tu stranicu
 Route::get('search', [ProductController::class,'search']);
-Route::post('add_to_cart', [ProductController::class,'addToCart']);
+// Route::post('add_to_cart', [ProductController::class,'addToCart']);
 Route::get('cartList', [ProductController::class,'cartList']);
-Route::get('remove_from_cart/{id}', [ProductController::class,'removeFromCart']);
+// Route::get('remove_from_cart/{id}', [ProductController::class,'removeFromCart']);
 Route::get('ordernow', [ProductController::class,'orderNow']);
-Route::post('orderplace', [ProductController::class,'orderPlace']);
+// Route::post('order_place', [ProductController::class,'orderPlace']);
 Route::get('myorders', [ProductController::class,'myOrders']);
-Route::view('/register', 'register');
-Route::post('/register', [UserController::class,'register']);
+Route::view('/register', 'add');
+Route::view('/edit', 'edit');
+Route::view('/profile', 'profile');
+// Route::put('edit',[UserController::class,'edit']);
+// Route::post('/register', [UserController::class,'register']);
 

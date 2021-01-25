@@ -32,7 +32,7 @@ class ProductController extends Controller
         return view('search',['products'=>$data]);
     }
 
-    function addToCart(Request $req){
+    function addToCart(Request $req){//API OK post
         if($req->session()->has('user')){
             $cart = new Cart;
             $cart->user_id = $req->session()->get('user')['id'];
@@ -66,9 +66,19 @@ class ProductController extends Controller
         return view('cartList',['products'=>$products]);
     }
 
-    function removeFromCart($id){
-        Cart::destroy($id);
+    function removeFromCart($id){//API OK get, iako bi trebalod a bude delete
+        // Cart::destroy($id);
+        // return redirect('cartList');
+
+        $cart = Cart::find($id);
+        $cart->delete();
         return redirect('cartList');
+        // if($result){
+        //     return ["Result"=>"Delete successful"];
+        // }else{
+        //     return ["Result"=>"Delete ERROR"];
+        // }
+
     }
     
     function orderNow(){
@@ -82,7 +92,7 @@ class ProductController extends Controller
         return view('ordernow',['total'=>$total]);
     }
 
-    function orderPlace(Request $req){
+    function orderPlace(Request $req){ //API OK post
         $userId = Session::get('user')['id'];
         $allCart = Cart::where('user_id',$userId)->get();
         foreach($allCart as $cart){
@@ -110,4 +120,27 @@ class ProductController extends Controller
 
         return view('myorders',['orders'=>$orders]);
     }
+
+    function list($id=null){
+        //id=null ->id moze da bude null 
+        //ne vraca onda konkretno jedan prod
+        //tad vrati sve
+
+        return $id?Product::find($id):Product::all();
+        //id=null -> vrati sve
+        //moze i da se napravi odvojena f-ja za pojedinacne proizvode
+        //al to je losiji nacin jer moras da imas dve rute i f-je
+    }
+
+    function searchProd($name){
+        $result =  Product::where('name', 'like','%'.$name.'%')->get();
+        if(count($result)){
+            return $result;
+        } else {
+            return ["Result"=>"No mathces"];
+        }
+    }
+
+    
+
 }

@@ -20,7 +20,7 @@
             </tbody>
         </table>
         <div>
-        <form action="/orderplace" method="POST">
+        <form action="/api/order_place" method="POST">
             @csrf 
             <div class="form-group">
                 

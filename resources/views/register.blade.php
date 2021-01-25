@@ -3,7 +3,7 @@
 <div class="containter custom-login">
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
-            <form action="register" method="POST">
+            <form action="api/add" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="exampleInputEmail1">User name</label>

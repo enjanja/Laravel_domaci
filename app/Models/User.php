@@ -16,6 +16,10 @@ class User extends Authenticatable
      *
      * @var array
      */
+    // protected $table = "users";//ovo smo dodali da bismo znali kako nam se zove tablea u bazi, al msm da je to jer je on importovao baze
+    public $timestamps = false; //da ne koristimo default timestamps
+
+
     protected $fillable = [
         'name',
         'email',
