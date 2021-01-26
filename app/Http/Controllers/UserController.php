@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\User; //povezali smo s user modelom
 use Validator;
 use App\Http\Controllers\Session;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\MessageBag;
 
 class UserController extends Controller
 {
@@ -14,7 +16,7 @@ class UserController extends Controller
     function login(Request $req){
         $user =  User::where(['email'=>$req->email])->first(); //postavimo sve ovo u user prom
         if(!$user || !Hash::check($req->password,$user->password)){
-            return "Username or password is not mathced";
+            return redirect()->back();
             //ako nema usera izbaci poruku
         }else{
             $req->session()->put('user',$user);
@@ -55,6 +57,7 @@ class UserController extends Controller
     }//radi
 
     function update(Request $req, $id){
+        return["User"=>$id];
         $rules = array(
             "name"=>"required|min:3",
             "email"=>"required|min:6",
@@ -84,7 +87,8 @@ class UserController extends Controller
         // }else{
         //     return ["Result"=>"Error"];
         // }
-    }//radi
+    }//ne radiiiii
+
 
 
     function delete($id){

@@ -20,15 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('user', 'UserController@user');//vraca sve usere
-// Route::get('user/{id}', 'UserController@userByID');//vraca usera sa id-em
-// Route::post('user','UserController@saveUser');//ovde se cuvaju u postmanu, al meni ne radi
-// // Route::put('user/{user}','UserController@updateUser');//u postmanu se vrse izmene preko put naredbe
-// Route::put('user/{id}','UserController@updateUser');
-// // Route::delete('user/{user}','UserController@deleteUser');//u postmanu proverimo dal brise iz baze
-// Route::delete('user/{id}','UserController@deleteUser');
-
-
 // Route::get('list/{id?}',[ProductController::class,'list']);
 // Route::get('searchProd/{name}',[ProductController::class,'searchProd']);
 
@@ -49,3 +40,6 @@ Route::put('update/{id}',[UserController::class,'update']);
 
 //brise usera
 Route::delete('delete/{id}',[UserController::class,'delete']);//delete - RADI
+
+//
+// Route::get('cartList', [ProductController::class,'cartList']);

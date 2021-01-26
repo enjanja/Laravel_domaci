@@ -1,0 +1,208 @@
+    /* .carousel-control{
+        opacity: .0;
+    } */
+    a {
+        color: #ca4990;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: monospace;
+    }
+    a:focus, a:hover {
+        color: #c44f8a;
+        text-decoration: underline;
+    }
+    
+    body{
+        background: white;
+    }
+    .btn{
+        color: white;
+        border-radius: 20px;
+        border: none;
+    }
+    .btn-danger{
+        background-color: #40cef1e8;
+    }
+    .btn-danger:hover{
+        color: #fff;
+        background-color: #2378c9;
+    }
+    .btn-primary{
+        background-color: pink;
+    }
+    .btn-primary:hover{
+        color: #fff;
+        background-color: rgb(255, 141, 160);
+    }
+    .btn-success{
+        background-color: pink;
+    }
+    .btn-success:hover{
+        color: #fff;
+        background-color: rgb(255, 141, 160);
+    }
+    .btn-default{
+        background-color: #40cef1e8;
+    }
+    .btn-default:hover{
+        color: #fff;
+        background-color: #2378c9;
+    }
+    .cart-list{
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+    .carousel-control.right{
+        opacity: .10 !important;
+        text-shadow: 10px 0px 8px 10px #FF0000;
+        background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.0) 100%);
+    }
+    .carousel-control.left{
+        opacity: .10 !important;
+        text-shadow: 10px 0px 8px 10px #FF0000;
+        background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.0) 100%);
+    }
+    .carousel-indicators .active {
+        width: 12px;
+        height: 12px;
+        margin: 0;
+        background-color: rgb(111, 202, 255);
+    }
+    .carousel-indicators li {
+        border: 1px solid rgb(111, 202, 255);
+        width: 20px;
+        box-shadow: 2px 0px 8px rgb(111, 202, 255);
+    }
+    .custom-login{
+        height: 500px;
+        padding-top: 100px;
+    }
+    .custom-product{
+        height: 600px;
+    }
+
+    .details{
+        text-transform: uppercase;
+    }
+    .detail-container{
+        height: 100%;
+    }
+    .details .name{
+        color: orange;
+    }
+    .detail-img{
+        height: 300px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px #2796ff;
+    }
+    
+    .item_name{
+        color:  rgb(111, 202, 255);
+    }
+    
+    .modal-header{
+        background-color: pink;
+        color: orange;
+    }
+    .modal-footer{
+        background-color: pink;
+        color: orange;
+    }
+    .my_indicators{
+        color:pink;
+    }
+    .my_brand{
+        background: rgb(255, 141, 160);
+        opacity: .6;
+    }
+    .my_navbar{
+        border-radius: 0px;
+        margin-bottom: 30px;
+        background:pink;
+    }
+    .my-orders{
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+    #myCarousel{
+        box-shadow: 0px 0px 10px 0px #2796ff;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: #2796ff;
+        box-shadow: 0px 0px 8px #2796ff;
+    }
+    .navbar-default .navbar-nav>li>a {
+        color: orange;
+    }
+    
+    .overlay{
+        position: relative;
+        /* background: linear-gradient(to right, rgb(226, 131, 131), white); */
+    }
+    /* .carousel-inner{
+        background-image: linear-gradient(to right, white, rgb(255, 153, 153)); 
+    
+    } */
+    .ordernow-tr{
+        height: 70px;
+        color: orange;
+    }
+  
+
+    .search-box{
+        width: 300px !important;
+    }
+    .slider-text{
+        color: crimson !important;
+        font-size: 1.5em;
+    }
+    .slider-img{
+        height: 400px !important;
+        /* position: absolute; */
+        /* opacity: .8; */
+    }
+    .trending-img{
+        height: 200px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px #2796ff;
+    }
+    .trending-item{
+        display: block;
+        align-content: center;
+        text-align-last: center;
+        float: left;
+        width: 20%;
+        margin-top: 20px;
+    }
+    .trending-wrapper{
+        margin: 30px;
+        color: orange;
+    }
+
+   
+    
+    .panel-default{
+            
+        padding-top: 40px;
+        border: none;
+        position: sticky;
+        height: 100px;
+        top: calc( 100vh - 100px );
+        width: 100%;
+        background-color: white;
+        color:  orange;
+        text-align: center;
+    }
+    .panel-footer{
+        /* box-shadow: 0px 2px 6px 2px rgb(255, 95, 95); */
+        width: 100%;
+        /* border-radius: 30px; */
+        padding-top: 20px;
+        margin-top: 29px;
+        background-color:  pink;
+    }
+    .row{
+        width: 100%;
+    }
+      

@@ -3,10 +3,12 @@
 <div class="custom-product">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
+    <ol class="carousel-indicators my_indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -18,7 +20,9 @@
             <!-- jer je ono activ bilo u ovom prvom divu iznad -->
             <!-- item {{$item}}... objasnjenje u Product model.txt -->
                 <a href="detail/{{$item['id']}}">
-                    <img class="slider-img" src="{{$item['gallery']}}">
+                    <div class="overlay">
+                        <img class="slider-img" src="{{$item['gallery']}}">
+                    </div>
                     <div class="carousel-caption slider-text">
                         <h3>{{$item['name']}}</h3>
                         <p>{{$item['description']}}</p>
@@ -39,13 +43,13 @@
     </a>
     </div>
     <div class="trending-wrapper">
-    <h3>Trending sweets</h3>
+    <h3>All the sweets</h3>
         @foreach($products as $item)
         <div class="trending-item">
         <a href="detail/{{$item['id']}}">
             <img class="trending-img" src="{{$item['gallery']}}">
             <div class="">
-                <h3>{{$item['name']}}</h3>
+                <h3 class="item_name">{{$item['name']}}</h3>
             </div>
         </a>
         </div>

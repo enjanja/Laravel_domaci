@@ -5,15 +5,15 @@
         <table class="table">
             
             <tbody>
-            <tr>
+            <tr class="ordernow-tr">
                 <td>Amount</td>
                 <td>${{$total}}</td>
             </tr>
-            <tr>
+            <tr class="ordernow-tr">
                 <td>Delivery</td>
                 <td>$10</td>
             </tr>
-            <tr>
+            <tr class="ordernow-tr">
                 <td>Total amount</td>
                 <td>${{$total+10}}</td>
             </tr>

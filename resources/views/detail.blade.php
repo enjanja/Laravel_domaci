@@ -1,13 +1,13 @@
 @extends('master')
 @section("contetn")
-<div class="container">
+<div class="container detail-container">
     <div class="row">
         <div class="col-sm-6">
             <img class="detail-img" src="{{$product['gallery']}}" alt="">
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6 details">
             <a href="/">Go back</a>
-            <h2>{{$product['name']}}</h2>
+            <h2 class="name">{{$product['name']}}</h2>
             <h3>Price: {{$product['price']}}</h3>
             <h4>Details: {{$product['description']}}</h4>
             <h4>Category: {{$product['category']}}</h4>
@@ -18,9 +18,7 @@
                 <button class="btn btn-primary">Add to cart</button>
             
             </form>
-            <br><br>
-            <button class="btn btn-success">Buy now</button>
-
+            
         </div>
     </div>
 </div>

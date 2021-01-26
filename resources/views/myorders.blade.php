@@ -3,7 +3,7 @@
 <div class="custom-product"> 
     <div class="col-sm-10">
         <div class="trending-wrapper">
-            <h4>My orders:</h4>
+            <h4 class="my-orders">My orders:</h4>
             @foreach($orders as $item)
             <div class="row searched-item cart-list">
                 <div class="col-sm-3">
@@ -61,7 +61,7 @@
                     <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="{{Session::get('user')['password']}}">
                 </div>
                 <input type="hidden" name="_method" value="put">
-                <button type="submit" class="btn btn-default">Update</button>
+                <button type="submit" class="btn btn-success">Update</button>
             </form>
           
         </div>
@@ -91,15 +91,16 @@
         <!--  Modal body -->
         <div class="modal-body">
           <h3>Are u sure? are u really really sure???</h3>
+          <form action="/api/delete/{{Session::get('user')['id']}}" method="POST">
+                @csrf
+                <input type="hidden" name="_method" value="delete">
+                <button type="submit" class="btn btn-success">Yes...</button>
+            </form>
         </div>
         
         <!-- Modal footer -->
         <div class="modal-footer">
-            <form action="/api/delete/{{Session::get('user')['id']}}" method="POST">
-                @csrf
-                <input type="hidden" name="_method" value="delete">
-                <button type="submit" class="btn btn-default">Yes...</button>
-            </form>
+            
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
         
