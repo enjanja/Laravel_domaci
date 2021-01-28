@@ -3,8 +3,8 @@
 <div class="custom-product"> 
     <div class="col-sm-10">
         <div class="trending-wrapper">
-            <h4>My cart:</h4>
-            <a href="ordernow" class="btn btn-success">Order now</a>
+            <h4 style="padding-bottom: 30px;">My cart:</h4>
+            <a href="ordernow" class="btn btn-success" style="margin-bottom: 20px;">Order now</a>
             <br><br>
             @foreach($products as $item)
             <form action="/api/remove_from_cart/{{$item->cart_id}}" method="POST">

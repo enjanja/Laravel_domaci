@@ -1,6 +1,6 @@
 @extends('master')
 @section("contetn")
-<div class="custom-product"> 
+<div class="custom-product search-product"> 
 
     <div class="col-sm-4">
         <a href="#">Filter</a>
